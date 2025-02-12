@@ -61,6 +61,7 @@
     flex: 1;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .product {
@@ -116,14 +117,9 @@
   }
 }
 
-/* Individual Product Page Media Queries */
-@media (max-width: 1268px) {
-
-  .product {
-    max-width: 700px;
+@media (max-width: 770px) {
+  .mainpart {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    justify-content: center;
+    align-items: center;
   }
 }
