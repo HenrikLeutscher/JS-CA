@@ -1,0 +1,164 @@
+@import url("../css/global.css");
+
+@import url("../css/variables.css");
+
+.mainpart {
+  background-color: var(--background-color);
+  background-size: cover;
+  padding: 20px;
+}
+
+.CheckoutNav,
+.PaymentSectionVisa,
+.PaymentSectionPaypal,
+.CheckoutProduct {
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.CheckoutNav,
+.VisaHeader {
+  font-family: "Bebas Neue Regular", Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: var(--mainheaderfontsize);
+}
+
+.CheckoutNav img,
+.VisaHeader img {
+  height: 80px;
+  width: auto;
+  cursor: pointer;
+}
+
+.CheckoutNav h1 {
+  flex: 1;
+  text-align: center;
+}
+
+.CheckoutProduct {
+  padding: 25px;
+}
+
+.CheckoutProductInfo {
+  display: flex;
+  align-items: center;
+  font-size: var(--mainfontsize);
+}
+
+.CheckoutProductInfo img {
+  width: 200px;
+  height: auto;
+}
+
+.CheckoutProductInfo h3,
+.CheckoutProductInfo p {
+  font-family: "Nunito Sans Light", Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 50px;
+}
+
+.PaymentSectionVisa,
+.PaymentSectionPaypal {
+  padding: 20px;
+}
+
+.VisaHeader,
+.PaypalHeader {
+  font-family: "Nunito Sans Regular", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainheaderfontsize);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.PaymentForm input {
+  margin-right: 10px;
+}
+
+.VisaHeader img,
+.PaypalHeader img {
+  width: 60px;
+  height: auto;
+}
+
+.PaymentForm {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.PaymentForm label {
+  display: block;
+  font-size: var(--mainheaderfontsize);
+  margin-bottom: 5px;
+}
+
+.PaymentForm input {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+}
+
+.Adress {
+  font-size: var(--mainfontsize);
+}
+
+
+.PayNow {
+  font-family: "Nunito Sans Regular", Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  background-color: var(--color-secondary);
+  color: var(--default-text-color);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: var(--mainfontsize);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.PayNow:hover {
+  background-color: var(--hovercolor);
+}
+
+@media (max-width: 768px) {
+  .CheckoutNav,
+  .VisaHeader,
+  .PaypalHeader {
+  font-size: var(--phoneheadersize);
+  }
+
+  .CheckoutNav img,
+  .VisaHeader img {
+  height: 30px;
+  width: auto;
+  }
+
+  .CheckoutProduct img {
+    height: 100px;
+    width: auto;
+  }
+
+  .CheckoutProductInfo h3,
+  .CheckoutProductInfo p {
+  font-family: "Nunito Sans Light", Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 50px;
+  font-size: var(--phonemainfontsize);
+  }
+
+  .VisaHeader img,
+  .PaypalHeader img {
+  width: 30px;
+  height: auto;
+  }
+
+  .PaymentForm label,
+  .PaymentForm input,
+  .Adress {
+    font-size: var(--phoneheadersize);
+  }
+}

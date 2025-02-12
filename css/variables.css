@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #25363C;
+  --color-secondary: #12A1BB;
+  --background-color: #95B0B7;
+  --default-text-color: #25363C;
+
+  --mainfontsize: 25px;
+  --mainheaderfontsize: 35px;
+  --buttonfontsize: 15px;
+  --productnameheader: 25px;
+
+  --phonemainfontsize: 15px;
+  --phoneheadersize: 25px;
+
+  --hovercolor: #95B0B7;
+}

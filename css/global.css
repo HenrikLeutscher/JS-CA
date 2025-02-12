@@ -1,0 +1,228 @@
+@font-face {
+  font-family: "Bebas Neue Regular";
+  src: url("../assets/fonts/bebasneueregular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito Sans Regular";
+  src: url("../assets/fonts/nunitosansregular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito Sans Bold";
+  src: url("../assets/fonts/nunitosansbold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito Sans Italic";
+  src: url("../assets/fonts/nunitosansitalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito Sans Light Italic";
+  src: url("../assets/fonts/nunitosanslightitalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito Sans Medium";
+  src: url("../assets/fonts/nunitosansmedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito Sans Light";
+  src: url("../assets/fonts/nunitosanslight.ttf") format("truetype");
+}
+
+html, body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  max-width: 1980px;
+  background-color: #25363C;
+}
+/* Global Header on all pages */
+header {
+  font-family: "Bebas Neue Regular", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #25363C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  top: 0;
+}
+
+.logo1 {
+  width: 125px;
+  height: auto;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  padding: 0;
+  margin: 0;
+  font-size: var(--mainfontsize);
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: #12A1BB;
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.header a:hover {
+  text-decoration: underline;
+  color: var(--hovercolor);
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icons .icon {
+  width: 40px;
+  height: auto;
+}
+
+.icons a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* Global Footer on all pages */
+.ending {
+  font-family: "Bebas Neue Regular", Verdana, Geneva, Tahoma, sans-serif;
+  background: #25363C;
+  color: #12A1BB;
+  text-decoration: none;
+  display: flex;
+  gap: 75px;
+  font-size: var(--mainfontsize);
+  padding-top: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.ending a {
+  color: #12A1BB;
+  text-decoration: none;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.ending a:hover {
+  color: var(--hovercolor);
+}
+
+.logo3 {
+  padding-right: 10px;
+  padding-left: 20px;
+  width: 350px;
+  height: 210px;
+}
+
+footer {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  background: #25363C;
+  color: #12A1BB;
+  font-size: 15px;
+}
+
+/* Product Pages Global */
+
+.product {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1500px;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.product img {
+  height: 700px;
+  width: auto;
+}
+
+.productcontent {
+  background-color: white;
+  border-radius: 20px;
+  padding-left: 60px;
+  max-width: 700px;
+}
+
+/* Individual Products */
+
+.dotproduct1,
+.dotproduct2,
+.dotproduct3,
+.dotproduct4 {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.sizes {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-top: 40px;
+  font-size: var(--mainheaderfontsize);
+}
+
+.sizes p {
+  font-family: "Nunito Sans Medium", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sizes span {
+  font-family: "Nunito Sans Medium", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--color-secondary);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: var(--mainheaderfontsize);
+  cursor: pointer;
+}
+
+.addtocart:hover,
+.sizes span:hover {
+  background: var(--hovercolor);
+}
+
+.dotproduct1:hover,
+.dotproduct2:hover,
+.dotproduct3:hover,
+.dotproduct4:hover {
+  border-style: dashed;
+}
+
+/* Global Center Content With Max-With */
+
+.contactus,
+.mainpartcontent,
+.checkout {
+  margin: 0 auto;
+  max-width: 800px;
+}

@@ -1,0 +1,42 @@
+@import url("../css/global.css");
+
+@import url("../css/variables.css");
+
+.mainpart {
+  background-image: url("../assets/images/nature.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px;
+  background-position: center;
+  padding-top: 50px;
+}
+
+.logo2 {
+  background-color: var(--color-primary);
+  border-radius: 30px;
+  padding-inline: 20px;
+  padding-block: 20px;
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: auto;
+}
+
+.shopnow {
+  font-family: "Bebas Neue Regular", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainheaderfontsize);
+  padding-inline: 20px;
+  padding-block: 8px;
+  border-radius: 20px;
+  background: var(--color-primary);
+  color:var(--color-secondary);
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.shopnow:hover {
+  color: var(--hovercolor);
+  text-decoration: underline;
+}
