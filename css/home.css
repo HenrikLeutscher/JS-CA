@@ -75,18 +75,18 @@
   max-width: 100%;
 }
 
-.productimage img {
+.jacketimg img {
   width: 100%;
   height: auto;
   object-fit: cover; 
 }
 
-.genderclass {
+.gendercategory {
   font-family: "Nunito Sans Light Italic", Verdana, Geneva, Tahoma, sans-serif;
   font-size: var(--mainfontsize);
 }
 
-.productname {
+.producttitle {
   font-family: "Nunito Sans Bold", Verdana, Geneva, Tahoma, sans-serif;
   font-size: var(--mainfontsize);
 }
@@ -95,7 +95,7 @@
   font-size: var(--mainfontsize);
 }
 
-.productimage {
+.jacketimg {
   display: flex;
   height: auto;
   margin-bottom: 20px;
@@ -154,22 +154,22 @@
 }
 
 
-.quantity-controls {
+.qty {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.decrease,
-.increase {
+.basketqtyminus,
+.basketqtyplus {
   color: #12A1BB;
   background-color: #25363C;
   text-decoration: none;
   border: none;
 }
 
-.decrease,
-.increase {
+.basketqtyminus,
+.basketqtyplus {
   width: 50px;
   height: 20px;
 }
@@ -189,8 +189,8 @@
   padding-bottom: 5px;
 }
 
-.decrease:hover,
-.increase:hover {
+.basketqtyminus:hover,
+.basketqtyplus:hover {
   border: #12A1BB;
   border-style: inset;
 }
@@ -212,11 +212,11 @@
   justify-content: center;
 }
 
-.productimage img {
+.jacketimg img {
   height: 400px;
 }
 
-.jacket {
+.rainydaysjacket {
   height: 800px;
   max-width: 400px;
 }
