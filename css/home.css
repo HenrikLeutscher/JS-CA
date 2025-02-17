@@ -75,33 +75,6 @@
   max-width: 100%;
 }
 
-.jacket1,
-.jacket2,
-.jacket3,
-.jacket4,
-.jacket5,
-.jacket6,
-.jacket7 {
-  background: white;
-  border-radius: 40px;
-  padding: 20px;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.jacket1:hover,
-.jacket2:hover,
-.jacket3:hover,
-.jacket4:hover,
-.jacket5:hover,
-.jacket6:hover,
-.jacket7:hover {
-  border-style: dashed;
-  border-color: var(--color-secondary);
-}
-
 .productimage img {
   width: 100%;
   height: auto;
@@ -180,24 +153,77 @@
   display: flex;
 }
 
-.readmore1 {
-  color: red;
+
+.quantity-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.decrease,
+.increase {
+  color: #12A1BB;
+  background-color: #25363C;
+  text-decoration: none;
+  border: none;
+}
+
+.decrease,
+.increase {
+  width: 50px;
+  height: 20px;
+}
+
+.readmorediv {
+  text-align: center;
+  margin: 15px;
+}
+
+.readmorediv .readmore1 {
+  text-decoration: none;
+  color: var(--color-secondary);
+  background-color: #25363C;
+  border-radius: 20px;
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.decrease:hover,
+.increase:hover {
+  border: #12A1BB;
+  border-style: inset;
+}
+
+.FilterGender,
+.FilterGender select,
+.FilterGender1 {
+  height: 40px;
+  color: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  font-family: "Nunito Sans Medium", Verdana, Geneva, Tahoma, sans-serif;
+  width: 200px;
+}
+
+.FilterGenderDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.productimage img {
+  height: 400px;
+}
+
+.jacket {
+  height: 800px;
+  max-width: 400px;
 }
 
 @media (max-width: 768px) {
   .mainpart {
     background-size: cover;
-  }
-
-  .jacket1,
-  .jacket2,
-  .jacket3,
-  .jacket4,
-  .jacket5,
-  .jacket6,
-  .jacket7 {
-  width: 300px;
-  gap: 10px;
   }
 
   .ProductHeader {

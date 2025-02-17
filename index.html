@@ -24,7 +24,7 @@
       </nav>
       <div class="icons">
         <a href="#"><img src="./assets/icons/spyglass.png" alt="Search" class="icon"></a>
-        <a href="checkout.html"><img src="./assets/icons/shopping.png" alt="Shopping Cart" class="icon"></a>
+          <a href="checkout.html"><img src="./assets/icons/shopping.png" alt="Shopping Cart" class="icon"></a>
         </i>
       </div>
     </header>
@@ -38,6 +38,14 @@
       <section class="ProductHeader">
         <h1>Our Products</h1>
       </section>
+      <div class="FilterGenderDiv">
+        <label class="FilterGender" for="genderFilter">Filter by Gender:</label>
+          <select class="FilterGender1" id="genderFilter">
+            <option value="all">All</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+      </div>
       <section class="mainpart" id="products">
       </section>
       <section class="ending">
@@ -62,5 +70,6 @@
     </main>
     <footer>Copyright &copy;</footer>
     <script src="./js/index.js"></script>
+    <script src="./js/checkout.js"></script>
   </body>
 </html>

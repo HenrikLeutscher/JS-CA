@@ -1,0 +1,44 @@
+@import url("../css/global.css");
+
+@import url("../css/variables.css");
+
+.mainpart {
+  background-color: var(--background-color);
+  background-size: cover;
+  padding: 1px;
+  color: var(--color-primary);
+}
+
+#products {
+  background-color: var(--background-color);
+  padding: 50px;
+  display: flex;
+  color: var(--default-text-color);
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: fit-content;
+}
+
+.ProductContent {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  justify-content: center;
+}
+
+.ProductContent h1 {
+  font-size: 50px;
+  padding-bottom: 50px;
+}
+
+.ProductContent p {
+  font-size: var(--mainfontsize);
+}
+
+.add-to-cart {
+  font-size: var(--buttonfontsize);
+}
