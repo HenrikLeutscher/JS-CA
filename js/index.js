@@ -33,8 +33,8 @@ function displayProducts(products) {
           <span class="dotinstock" style="background: 'limegreen'};"></span>
           <p class="instock">In Stock</p>
         </div>
-        <div class="readmore">
-          <button>Read More</button
+        <div>
+          <button class="readmore1">Read More</button
         </div>
         <div class="quantity-controls">
           <button class="decrease" data-id="${product.id}">-</button>

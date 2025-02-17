@@ -153,37 +153,6 @@
   margin-right: 10px;
 }
 
-.dotproduct1,
-.dotproduct2,
-.dotproduct3,
-.dotproduct4 {
-  height: 30px;
-  width: 30px;
-  border-radius: 20px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* Jacket 1 */
-
-.dotproduct1 {
-  background: #676767;
-}
-
-.dotproduct2 {
-  background: #12A1BB;
-}
-
-.dotproduct3 {
-  background: #25363C;
-}
-
-.dotproduct4 {
-  background: #95B0B7;
-}
-
-/* Jacket1 Ending */
-
 .instockdotdiv,
 .instockdotdiv2 {
   display: flex;
@@ -193,150 +162,6 @@
 .dotinstock {
   background: limegreen;
 }
-
-/* Jacket 2 */
-
-.jacket2 .dotproduct1 {
-  background: #676767;
-}
-
-.jacket2 .dotproduct2 {
-  background: #12A1BB;
-}
-
-.jacket2 .dotproduct3 {
-  background: #FFFF00;
-}
-
-.jacket2 .dotproduct4 {
-  background: #FF3C00;
-}
-
-.jacket2 .dotinstock {
-  background: limegreen;
-}
-
-/* Jacket 2 End */
-
-/* Jacket 3 */
-
-.jacket3 .dotproduct1 {
-  background: #676767;
-}
-
-.jacket3 .dotproduct2 {
-  background: #12A1BB;
-}
-
-.jacket3 .dotproduct3 {
-  background: #A8A9A6;
-}
-
-.jacket3 .dotproduct4 {
-  background: #000000;
-}
-
-.jacket3 .dotinstock {
-  background: #E49C00;
-}
-
-/* Jacket 3 End */
-
-/* Jacket 4 */
-
-.jacket4 .dotproduct1 {
-  background: #676767;
-}
-
-.jacket4 .dotproduct2 {
-  background: #12A1BB;
-}
-
-.jacket4 .dotproduct3 {
-  background: #57884C;
-}
-
-.jacket4 .dotproduct4 {
-  background: #E0E0E0;
-}
-
-.jacket4 .dotinstock {
-  background: limegreen;
-}
-
-/* Jacket 4 End */
-
-/* Jacket 5 */
-
-.jacket5 .dotproduct1 {
-  background: #676767;
-}
-
-.jacket5 .dotproduct2 {
-  background: #12A1BB;
-}
-
-.jacket5 .dotproduct3 {
-  background: #DE3C25;
-}
-
-.jacket5 .dotproduct4 {
-  background: #9F9289;
-}
-
-.jacket5 .dotinstock {
-  background: limegreen;
-}
-
-/* Jacket 5 End */
-
-/* Jacket 6 */
-
-.jacket6 .dotproduct1 {
-  background: #676767;
-}
-
-.jacket6 .dotproduct2 {
-  background: #12A1BB;
-}
-
-.jacket6 .dotproduct3 {
-  background: #25363C;
-}
-
-.jacket6 .dotproduct4 {
-  background: #D50100;
-}
-
-.jacket6 .dotinstock {
-  background: limegreen;
-}
-
-/* Jacket6 End */
-
-/* Jacket 7 */
-
-.jacket7 .dotproduct1 {
-  background: #676767;
-}
-
-.jacket7 .dotproduct2 {
-  background: #12A1BB;
-}
-
-.jacket7 .dotproduct3 {
-  background: #25363C;
-}
-
-.jacket7 .dotproduct4 {
-  background: #7B7054;
-}
-
-.jacket7 .dotinstock {
-  background: limegreen;
-}
-
-/* Jacket7 End */
 
 .instock {
   font-family: "Nunito Sans Medium", Verdana, Geneva, Tahoma, sans-serif;
@@ -353,6 +178,10 @@
   border-radius: 20px;
   cursor: pointer;
   display: flex;
+}
+
+.readmore1 {
+  color: red;
 }
 
 @media (max-width: 768px) {
