@@ -212,11 +212,11 @@
   justify-content: center;
 }
 
-.jacketimg img {
+.jacketimage img {
   height: 400px;
 }
 
-.rainydaysjacket {
+.rainydaysjackets {
   height: 800px;
   max-width: 400px;
 }
