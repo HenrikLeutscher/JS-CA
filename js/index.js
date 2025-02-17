@@ -4,11 +4,10 @@ async function fetchProducts() {
   try {
     const response = await fetch(apiUrl);
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error("HTTP error! status: ${response.status}");
     }
     const products = await response.json();
     displayProducts(products);
-    updateCartCounter(); // Ensure counter shows the right value on load
   } catch (error) {
     console.error("Error fetching products:", error);
   }
@@ -26,13 +25,16 @@ function displayProducts(products) {
           <img src="${product.image}" alt="${product.title}" class="productimage">
         </div>
         <div>
-          <p class="genderclass">${product.category}</p>
+          <p class="genderclass">${product.gender}</p>
           <p class="productname">${product.title}</p>
-          <p class="productprice">USD ${product.price.toFixed(2)}</p>
+          <p class="productprice">NOK ${product.price}</p>
         </div>
         <div class="instockdotdiv">
-          <span class="dotinstock" style="background: ${product.stock > 0 ? 'limegreen' : 'red'};"></span>
-          <p class="instock">${product.stock > 0 ? 'In Stock' : 'Out of Stock'}</p>
+          <span class="dotinstock" style="background: 'limegreen'};"></span>
+          <p class="instock">In Stock</p>
+        </div>
+        <div class="readmore">
+          <button>Read More</button
         </div>
         <div class="quantity-controls">
           <button class="decrease" data-id="${product.id}">-</button>
@@ -73,30 +75,6 @@ function updateCart(productId, change) {
 
   localStorage.setItem("cart", JSON.stringify(cart));
   document.getElementById(`quantity-${productId}`).textContent = cart[productId] || 0;
-  updateCartCounter();
-}
-
-function updateCartCounter() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || {};
-  const totalItems = Object.values(cart).reduce((total, quantity) => total + quantity, 0);
-  const cartIcon = document.querySelector(".icon-cart-counter");
-
-  if (cartIcon) {
-    cartIcon.textContent = totalItems;
-  } else {
-    const icon = document.querySelector('.icons a[href="checkout.html"]');
-    const counter = document.createElement("span");
-    counter.classList.add("icon-cart-counter");
-    counter.textContent = totalItems;
-    counter.style.position = "absolute";
-    counter.style.top = "5px";
-    counter.style.right = "5px";
-    counter.style.background = "red";
-    counter.style.color = "white";
-    counter.style.padding = "2px 6px";
-    counter.style.borderRadius = "50%";
-    icon.appendChild(counter);
-  }
 }
 
 fetchProducts();
