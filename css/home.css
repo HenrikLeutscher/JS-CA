@@ -157,7 +157,7 @@
 .qty {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
 }
 
 .basketqtyminus,
@@ -172,6 +172,11 @@
 .basketqtyplus {
   width: 50px;
   height: 20px;
+}
+
+.qty span {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .readmorediv {

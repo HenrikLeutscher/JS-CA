@@ -1,7 +1,7 @@
 const apiUrl = "https://api.noroff.dev/api/v1/rainy-days"
 
 const productDiv = document.getElementById("product-container"); 
-const filterForGenders = document.getElementById("genderFilter");
+const filterForGenders = document.getElementById("gender-filter");
 const filterButtonForGenders = document.getElementById("genders-filter-button");
 
 let allProducts = [];
@@ -22,12 +22,28 @@ async function fetchProducts() {
         } else {
             displayTheseProducts = allProducts;
         }
+
         displayedProducts(displayTheseProducts);
         
+
     } catch (error) {
         productDiv.innerHTML = `<p>Unfortunatly we failed to fetch our products`;
         console.log(error);
     }
+}
+
+// Gender Filter
+function filterByGender() {
+    const genderSelected = filterForGenders.value;
+    let displayTheseProducts = [];
+
+    if (genderSelected !== "all") {
+        displayTheseProducts = allProducts.filter(product => product.gender.toLowerCase() === genderSelected);
+    } else {
+        displayTheseProducts = allProducts;
+    }
+
+    displayedProducts(displayTheseProducts);
 }
 
 function displayedProducts(products) {
@@ -52,12 +68,22 @@ function displayedProducts(products) {
             <div>
                 <a href="product.html?id=${product.id}" class="readmore1">Read More</a>
             </div>
+            <div class="qty">
+                <button class="basketqtyminus" data-id="${product.id}">-</button>
+                <span class="quantity" id="quantity-${product.id}">0</span>
+                <button class="basketqtyplus" data-id="${product.id}">+</button>
+            </div>
         </div>
     `;
-    productDiv.appendChild(productElement);
 
-    })
+
+    productDiv.appendChild(productElement);
+    });
 }
+
+// Cart + - 
+
+// Gender
 
 // Displaying all products from API
 fetchProducts();
