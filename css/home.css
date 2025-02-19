@@ -153,32 +153,6 @@
   display: flex;
 }
 
-
-.qty {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.basketqtyminus,
-.basketqtyplus {
-  color: #12A1BB;
-  background-color: #25363C;
-  text-decoration: none;
-  border: none;
-}
-
-.basketqtyminus,
-.basketqtyplus {
-  width: 50px;
-  height: 20px;
-}
-
-.qty span {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 .readmorediv {
   text-align: center;
   margin: 15px;
@@ -192,12 +166,6 @@
   padding: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-}
-
-.basketqtyminus:hover,
-.basketqtyplus:hover {
-  border: #12A1BB;
-  border-style: inset;
 }
 
 .FilterGender,
