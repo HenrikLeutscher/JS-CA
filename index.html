@@ -24,7 +24,10 @@
       </nav>
       <div class="icons">
         <a href="#"><img src="./assets/icons/spyglass.png" alt="Search" class="icon"></a>
-          <a href="checkout.html"><img src="./assets/icons/shopping.png" alt="Shopping Cart" class="icon"></a>
+          <a href="checkout.html">
+            <img src="./assets/icons/shopping.png" alt="Shopping Cart" class="icon">
+            <span id="cart-qty-count" class="cart-count">0</span>
+          </a>
         </i>
       </div>
     </header>
@@ -35,9 +38,7 @@
           <a href="#products" class="shopnow">Shop Now</a>
         </h1>
       </section>
-      <section class="ProductHeader">
-        <h1>Our Products</h1>
-      </section>
+
       <div class="FilterGenderDiv">
         <label class="FilterGender" for="genderFilter">Filter by Gender:</label>
         <select class="FilterGender1" id="gender-filter">
@@ -46,6 +47,10 @@
           <option value="Female">Female</option>
       </select>
       </div>
+
+      <section id="product-section">
+        <h1>Our Products</h1>
+      </section>
       <section class="mainpart" id="product-container">
       </section>
       <section class="ending">

@@ -145,79 +145,6 @@ footer {
   font-size: 15px;
 }
 
-/* Product Pages Global */
-
-.product {
-  padding: 20px;
-  background-color: white;
-  border-radius: 20px;
-  margin: 0 auto;
-  display: flex;
-  max-width: 1500px;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.product img {
-  height: 700px;
-  width: auto;
-}
-
-.productcontent {
-  background-color: white;
-  border-radius: 20px;
-  padding-left: 60px;
-  max-width: 700px;
-}
-
-/* Individual Products */
-
-.dotproduct1,
-.dotproduct2,
-.dotproduct3,
-.dotproduct4 {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.sizes {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  padding-top: 40px;
-  font-size: var(--mainheaderfontsize);
-}
-
-.sizes p {
-  font-family: "Nunito Sans Medium", Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.sizes span {
-  font-family: "Nunito Sans Medium", Verdana, Geneva, Tahoma, sans-serif;
-  background-color: var(--color-secondary);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: var(--mainheaderfontsize);
-  cursor: pointer;
-}
-
-.addtocart:hover,
-.sizes span:hover {
-  background: var(--hovercolor);
-}
-
-.dotproduct1:hover,
-.dotproduct2:hover,
-.dotproduct3:hover,
-.dotproduct4:hover {
-  border-style: dashed;
-}
 
 /* Global Center Content With Max-With */
 
@@ -226,4 +153,11 @@ footer {
 .checkout {
   margin: 0 auto;
   max-width: 800px;
+}
+
+.cart-count {
+  text-decoration: none;
+  color: var(--color-secondary);
+  justify-content: center;
+  font-family: "Nunito Sans Regular", Verdana, Geneva, Tahoma, sans-serif;
 }

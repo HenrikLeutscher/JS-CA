@@ -41,76 +41,6 @@
   text-decoration: underline;
 }
 
-
-
-.mainpart,
-.ProductHeader {
-  background-color: var(--background-color);
-  padding: 20px;
-  font-size: var(--mainfontsize);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-  gap: 40px;
-  justify-content: start;
-}
-
-.mainpart a,
-.ProductHeader {
-  text-decoration: none;
-  color: var(--color-primary);
-}
-
-.ProductHeader {
-  font-family: "Nunito Sans Bold", Verdana, Geneva, Tahoma, sans-serif;
-  display: flex;
-  justify-content: center;
-}
-
-.ProductHeader h1 {
-  background-color: white;
-  border-radius: 20px;
-  padding: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  max-width: 100%;
-}
-
-.jacketimg img {
-  width: 100%;
-  height: auto;
-  object-fit: cover; 
-}
-
-.gendercategory {
-  font-family: "Nunito Sans Light Italic", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: var(--mainfontsize);
-}
-
-.producttitle {
-  font-family: "Nunito Sans Bold", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: var(--mainfontsize);
-}
-.productprice {
-  font-family: "Nunito Sans Medium", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: var(--mainfontsize);
-}
-
-.jacketimg {
-  display: flex;
-  height: auto;
-  margin-bottom: 20px;
-  display: flex;
-}
-
-.colors-product {
-  font-family: "Nunito Sans Medium", Verdana, Geneva, Tahoma, sans-serif;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: var(--mainfontsize);
-  height: 1px;
-}
-
 .dotproduct1,
 .dotproduct2,
 .dotproduct3,
@@ -185,14 +115,6 @@
   justify-content: center;
 }
 
-.jacketimage img {
-  height: 400px;
-}
-
-.rainydaysjackets {
-  height: 800px;
-  max-width: 400px;
-}
 
 @media (max-width: 768px) {
   .mainpart {
@@ -202,4 +124,40 @@
   .ProductHeader {
     font-size: var(--phonemainfontsize);
   }
+}
+
+
+
+
+#product-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+  background-color: var(--background-color);
+}
+
+.jacket-product {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  width: 300px;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.image-container img {
+  height: 200px;
+  width: auto;
+}
+
+.view-more {
+}
+
+.product-information p {
+
 }
