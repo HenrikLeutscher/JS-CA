@@ -1,13 +1,4 @@
-fetch("https://v2.api.noroff.dev/rainy-days")
-.then(response => response.json()) // Convert response to JSON
-
-// Global variable to store all fetched products
-let allProducts = [];
-
-// Select the product-line container
-const productLine = document.getElementById("product-section");
-
-// Fetch all products from the API
+// Fetching items from API
 async function fetchProducts() {
   try {
       const response = await fetch("https://v2.api.noroff.dev/rainy-days");
@@ -28,6 +19,24 @@ async function fetchProducts() {
   }
 }
 
+// Global variable to store all fetched products
+let allProducts = [];
+
+// Select the product-line container
+const productLine = document.getElementById("product-section");
+
+// Filter the products by gender
+function filterByGender(products) {
+  const selectedGender = document.getElementById("gender-filter").value;
+  const filteredProducts = selectedGender === "all" 
+    ? products 
+    : products.filter(product => product.gender === selectedGender);
+  displayProducts(filteredProducts);
+}
+
+document.getElementById("gender-filter").addEventListener("change", () => {
+  filterByGender(allProducts);
+});
 
 // Function to display products
 function displayProducts(products) {
@@ -78,14 +87,16 @@ productContainer.appendChild(productLink);
 
   const price = document.createElement("p");
   price.classList.add("view-more")
-  price.textContent = `${product.price}$ incl. Taxes`;
+  price.textContent = `NOK ${product.price}`;
 
-  const viewMore = document.createElement("p");
-  price.textContent = `View More`;
+  const viewMore = document.createElement("a");
+  viewMore.textContent = `View More`;
+  viewMore.href = `../product/index.html?id=${product.id}`;
 
   productInfo.appendChild(title);
   productInfo.appendChild(gender);
   productInfo.appendChild(price);
+  productInfo.appendChild(viewMore);
 
   const actionContainer = document.createElement("div");
   actionContainer.classList.add("add-to-cart");
@@ -94,37 +105,18 @@ productContainer.appendChild(productLink);
   addToCartButton.classList.add("add-to-cart-button");
   addToCartButton.textContent = "Add to cart";
 
-  // Create favorite button
-  const favoriteButton = document.createElement("div");
-  favoriteButton.classList.add("favorite-button");
-  favoriteButton.innerHTML = '<i class="bi bi-heart favorite"></i>';
-
-  // Check if the product is already a favorite
-  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  if (favorites.some(fav => fav.id === product.id)) {
-      favoriteButton.classList.add("favorited"); 
-  }
-
-  // Add event listener to favorite button
-  favoriteButton.addEventListener("click", function () {
-      toggleFavorite(product, favoriteButton);
-  });
-
   actionContainer.appendChild(addToCartButton);
-  actionContainer.appendChild(favoriteButton);
-
   productContainer.appendChild(productInfo);
   productContainer.appendChild(actionContainer);
 
-  // Add Event Listener to Add Product to Cart
-  addToCartButton.addEventListener("click", function () {
-      addToCart(product);
+// Add Event Listener to Add Product to Cart
+addToCartButton.addEventListener("click", function () {
+    alert(`${product.title} was successfully added to the cart`)
+    addToCart(product);
   });
 
   return productContainer;
 }
-
-
 
 function addToCart(product) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];  
@@ -163,27 +155,3 @@ function updateCartCount() {
       cartQtyElement.innerText = totalItems;
   }
 }
-
-function toggleFavorite(product, buttonElement) {
-  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  const productIndex = favorites.findIndex(fav => fav.id === product.id);
-  const icon = buttonElement.querySelector("i"); 
-
-  if (productIndex === -1) {
-      // Add to favorites
-      favorites.push(product);
-      buttonElement.classList.add("favorited");
-      icon.classList.remove("bi-heart"); 
-      icon.classList.add("bi-heart-fill"); 
-  } else {
-      // Remove from favorites
-      favorites.splice(productIndex, 1);
-      buttonElement.classList.remove("favorited");
-      icon.classList.remove("bi-heart-fill"); 
-      icon.classList.add("bi-heart"); 
-  }
-
-  localStorage.setItem("favorites", JSON.stringify(favorites));
-}
-
-

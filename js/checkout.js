@@ -1,7 +1,6 @@
 const checkoutApiUrl = "https://api.noroff.dev/api/v1/rainy-days";
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("Checkout Page Loaded");
     displayCheckoutCartProducts();  // Call the function to display the cart products
 });
   
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function displayCheckoutCartProducts() {
     const checkoutCart = JSON.parse(localStorage.getItem('cart')) || [];  // Get the cart data from localStorage
     const checkoutCartContainer = document.getElementById('checkout-cart-products-container');  // The container where we display the products
-    checkoutCartContainer.innerHTML = '';  // Clear any previous content
+    checkoutCartContainer.innerHTML = ''; 
   
     if (checkoutCart.length === 0) {
       // If the cart is empty, show a message
@@ -31,10 +30,6 @@ function createCheckoutProductElement(product) {
     const checkoutProductContainer = document.createElement('div');
     checkoutProductContainer.classList.add('checkout-cart-product');
   
-    const checkoutProductImage = document.createElement('img');
-    checkoutProductImage.src = product.image?.url || "https://static.noroff.dev/api/rainy-days/9-thunderbolt-jacket.jpg"; // Use a default image if not available
-    checkoutProductImage.alt = product.title;
-  
     const checkoutProductInfo = document.createElement('div');
     checkoutProductInfo.classList.add('checkout-cart-product-info');
   
@@ -52,13 +47,15 @@ function createCheckoutProductElement(product) {
     checkoutProductInfo.appendChild(price);
     checkoutProductInfo.appendChild(quantity);
   
-    // Creation of remove button
+    // Remove product from cart button
     const removeButton = document.createElement('button');
     removeButton.classList.add('remove-cart-item');
     removeButton.textContent = 'Remove';
-    removeButton.addEventListener('click', () => removeFromCart(product.id));
+    removeButton.addEventListener('click', () => {
+      alert(`${product.title} was successfully removed from the cart!`);
+      removeFromCart(product.id)
+    });
     
-    checkoutProductContainer.appendChild(checkoutProductImage);
     checkoutProductContainer.appendChild(checkoutProductInfo);
     checkoutProductContainer.appendChild(removeButton);
   
@@ -67,7 +64,6 @@ function createCheckoutProductElement(product) {
   
 // Function to remove a product from the cart
 function removeFromCart(productId) {
-    // Get the current cart from localStorage
     let checkoutCart = JSON.parse(localStorage.getItem('cart')) || [];
   
     // Filter out the product with the specified productId

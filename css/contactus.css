@@ -1,0 +1,121 @@
+@import url("../css/global.css");
+
+@import url("../css/variables.css");
+
+.mainpart {
+  background-color: var(--background-color);
+  color: var(--color-primary);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.mainpart h1 {
+  font-family: "Bebas Neue Bold", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainheaderfontsize);
+}
+
+.mainpart h3 {
+  font-family: "Bebas Neue Bold", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainfontsize);
+}
+
+.mainpart p {
+  font-family: "Nunito Sans Light", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainfontsize);
+}
+
+.SocialMediaIcons {
+  font-family: "Nunito Sans Light", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainfontsize);
+  padding-bottom: 20px;
+}
+
+.SocialItem {
+  display: flex;
+  align-items: center;
+}
+
+.SocialIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.contactus {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.ContactUsForm form {
+  font-family: "Nunito Sans Light", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainfontsize);
+}
+
+.ContactUsForm button {
+  font-family: "Nunito Sans Regular", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--color-secondary);
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 20px;
+  border: none;
+  font-size: var(--mainfontsize);
+  border-radius: 20px;
+}
+
+input[type='text'],
+input[type='name'],
+input[type='email'],
+input[type='number'] {
+  padding: 10px;
+  height: 20px;
+  width: 200px;
+  padding: 10px;
+}
+
+.form_input {
+  display: block;
+  font-family: "Nunito Sans Regular", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.styled-form input::placeholder {
+  color: lightgrey;
+}
+
+.SubmitButton:hover {
+  background-color: var(--hovercolor);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contactus {
+    padding: 20px;
+  }
+
+  .mainpart p,
+  .SocialMediaIcons {
+    font-size: var(--buttonfontsize);
+  }
+
+  .ContactUsForm form{
+    font-size: var(--buttonfontsize);
+    padding-top: 10px;
+  }
+
+  .ContactUsForm button {
+    font-size: var(--buttonfontsize);
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: var(--buttonfontsize);
+    border-radius: 20px;
+  }
+}

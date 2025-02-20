@@ -1,0 +1,60 @@
+@import url("../css/global.css");
+
+@import url("../css/variables.css");
+
+.mainpart {
+  font-family: "Nunito Sans Regular", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--background-color);
+  background-size: cover;
+  padding: 20px;
+}
+
+.mainpartcontent img {
+  width: 800px;
+  height: auto;
+}
+
+.mainpartcontent {
+  background: white;
+  color: var(--default-text-color);
+  text-align: left;
+  border-radius: 20px;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.mainpartcontent h1 {
+  font-family: "Bebas Neue Bold", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainheaderfontsize);
+}
+
+.mainpartcontent p {
+  font-family: "Nunito Sans Light", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainfontsize);
+}
+
+@media (max-width: 950px) {
+  .mainpart img {
+    width: 310px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainpartcontent {
+    padding: 20px;
+  }
+
+  .mainpart h1 {
+    font-size: var(--phoneheadersize);
+  }
+
+  .mainpart p {
+    font-size: var(--phonemainfontsize);
+  }
+
+  .mainpart img {
+    width: 310px;
+    height: auto;
+  }
+}

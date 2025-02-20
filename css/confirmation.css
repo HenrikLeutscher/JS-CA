@@ -1,0 +1,67 @@
+@import url("../css/global.css");
+
+@import url("../css/variables.css");
+
+.mainpart {
+  font-family: "Nunito Sans Light", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--background-color);
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+}
+
+.mainpart h1,
+.mainpart h2 {
+  font-family: "Nunito Sans Bold", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: var(--mainheaderfontsize);
+}
+
+.mainpart li,
+.mainpart p {
+  font-size: var(--mainheaderfontsiz);
+}
+
+.ConfirmationContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.ConfirmationContent img {
+  background-color: var(--color-secondary);
+  height: 150px;
+  width: auto;
+  padding: 40px;
+  margin-top: 20px;
+  border-radius: 100%;
+}
+
+.ConfirmationButton Button {
+  font-family: "Nunito Sans Regular", Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 20px;
+  background-color: var(--color-secondary);
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: var(--mainfontsize);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.ConfirmationButton Button:hover {
+  background-color: var(--hovercolor);
+}
+
+.order-product {
+  font-family: "Nunito Sans Regular", Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-secondary);
+  color: var(--default-text-color);
+}
+
+.order-product h3 {
+  margin-right: 20px;
+}
