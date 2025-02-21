@@ -89,7 +89,7 @@ function createProductElement(product) {
 
   const viewMore = document.createElement("a");
   viewMore.textContent = `View More`;
-  viewMore.href = `../product/product.html?id=${product.id}`;
+  viewMore.href = `product/product.html?id=${product.id}`;
 
   productInfo.appendChild(title);
   productInfo.appendChild(gender);
