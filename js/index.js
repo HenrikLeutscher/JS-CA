@@ -1,31 +1,30 @@
 // Fetching items from API
 async function fetchProducts() {
   try {
-      const response = await fetch("https://v2.api.noroff.dev/rainy-days");
-      if (!response.ok) {
-        throw new Error("Failed to fetch products");
-      }
+    const response = await fetch("https://v2.api.noroff.dev/rainy-days");
+    if (!response.ok) {
+      throw new Error("Failed to fetch products");
+    }
+    const data = await response.json();
 
-      const data = await response.json();
+    allProducts = data.data;
 
-      allProducts = data.data;
+    allProducts = allProducts.filter(product => product && product.title);
 
-      allProducts = allProducts.filter(product => product && product.title);
-
-      displayProducts(allProducts);
+    displayProducts(allProducts);
 
   } catch (error) {
-      console.error("Error fetching products:", error);
+    console.error("Error fetching products:", error);
   }
 }
 
-// Global variable to store all fetched products
+// Globally storing all data
 let allProducts = [];
 
-// Select the product-line container
+// Selecting where product will be displayed
 const productLine = document.getElementById("product-section");
 
-// Filter the products by gender
+// Gender Filter
 function filterByGender(products) {
   const selectedGender = document.getElementById("gender-filter").value;
   const filteredProducts = selectedGender === "all" 
@@ -38,7 +37,6 @@ document.getElementById("gender-filter").addEventListener("change", () => {
   filterByGender(allProducts);
 });
 
-// Function to display products
 function displayProducts(products) {
 
   productLine.innerHTML = "";
@@ -58,23 +56,23 @@ function createProductElement(product) {
   productLink.href = `html/product-page.html?id=${product.id}`;
   productLink.title = product.title;
 
-const imageContainer = document.createElement("div");
-imageContainer.classList.add("image-container");
+  const imageContainer = document.createElement("div");
+  imageContainer.classList.add("image-container");
 
-const productImage = document.createElement("img");
-productImage.classList.add("product-image");
+  const productImage = document.createElement("img");
+  productImage.classList.add("product-image");
 
-if (product.image && product.image.url) {
-  productImage.src = product.image.url;
-} else {
-  productImage.src = "https://static.noroff.dev/api/rainy-days/9-thunderbolt-jacket.jpg";
-}
+  if (product.image && product.image.url) {
+    productImage.src = product.image.url;
+  } else {
+    productImage.src = "https://static.noroff.dev/api/rainy-days/9-thunderbolt-jacket.jpg";
+  }
 
-productImage.alt = product.title;
+  productImage.alt = product.title;
 
-imageContainer.appendChild(productImage);
-productLink.appendChild(imageContainer);
-productContainer.appendChild(productLink);
+  imageContainer.appendChild(productImage);
+  productLink.appendChild(imageContainer);
+  productContainer.appendChild(productLink);
 
   const productInfo = document.createElement("div");
   productInfo.classList.add("product-information");
@@ -109,8 +107,8 @@ productContainer.appendChild(productLink);
   productContainer.appendChild(productInfo);
   productContainer.appendChild(actionContainer);
 
-// Add Event Listener to Add Product to Cart
-addToCartButton.addEventListener("click", function () {
+  // Event listener when add to cart is clicked
+  addToCartButton.addEventListener("click", function () {
     alert(`${product.title} was successfully added to the cart`)
     addToCart(product);
   });
@@ -134,18 +132,6 @@ function addToCart(product) {
     updateCartCount();  
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  fetchProducts();
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  console.log("DOM Loaded");
-  fetchProducts();  // Fetch products if you're displaying them
-  updateCartCount();  // Update the cart count when the page loads
-});
-
-
-
 function updateCartCount() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
@@ -155,3 +141,8 @@ function updateCartCount() {
       cartQtyElement.innerText = totalItems;
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  fetchProducts();
+  updateCartCount();
+});
